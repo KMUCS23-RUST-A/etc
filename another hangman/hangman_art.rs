@@ -8,6 +8,65 @@ fn main() {
     let mut guessed_letters = vec![];
     let mut num_guesses = 0;
 
+    let hangman_art = [
+        r#"
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+========="#,
+        r#"
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+========="#,
+        r#"
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+========="#,
+        r#"
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+========="#,
+        r#"
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+========="#,
+        r#"
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+========="#,
+        r#"
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+========="#,
+    ];
+
     loop {
         println!("Guess a letter:");
         io::stdout().flush().unwrap();
@@ -42,9 +101,12 @@ fn main() {
             break;
         }
 
-        if num_guesses >= 6 {
+        if num_guesses >= hangman_art.len() {
             println!("You lose! The word was {}", word);
+            println!("{}", hangman_art[num_guesses - 1]);
             break;
+        } else {
+            println!("{}", hangman_art[num_guesses]);
         }
     }
 }
