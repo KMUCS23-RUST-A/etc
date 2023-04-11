@@ -24,7 +24,7 @@ cargo run
 ```
 Guess a letter:
 a
-Guessed so far: a__l_
+Guessed so far: a____
 
   +---+
   |   |
@@ -33,76 +33,93 @@ Guessed so far: a__l_
       |
       |
 =========
+Guess a letter:
+b
+Guessed so far: a____
 
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+Guess a letter:
+c
+Guessed so far: a____
+
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+Guess a letter:
+d
+Guessed so far: a____
+
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========
 Guess a letter:
 e
-Guessed so far: a__le
-
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-
-Guess a letter:
-i
-Guessed so far: a_ile
+Guessed so far: a___e
 
   +---+
   |   |
   O   |
-      |
+ /|   |
       |
       |
 =========
-
 Guess a letter:
-u
-Guessed so far: a_ile
+f
+Guessed so far: a___e
 
   +---+
   |   |
   O   |
+ /|\  |
+      |
+      |
+=========
+Guess a letter:
+g
+Guessed so far: a___e
+
+  +---+
+  |   |
+  O   |
+ /|\  |
  /    |
       |
-      |
 =========
-
 Guess a letter:
-s
-Guessed so far: a_isle
+h
+Guessed so far: a___e
 
   +---+
   |   |
   O   |
- /    |
-      |
-      |
-=========
-
-Guess a letter:
-r
-Guessed so far: a_isle
-
-  +---+
-  |   |
-  O   |
+ /|\  |
  / \  |
       |
-      |
 =========
-
-You lose! The word was "aisle".
+Guess a letter:
+j
+Guessed so far: a___e
+You lose! The word was apple
 
   +---+
   |   |
   O   |
+ /|\  |
  / \  |
-      |
       |
 =========
 ```
-
-## 
