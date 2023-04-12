@@ -1,4 +1,4 @@
-use std::time::{Instant, Duration};
+use std::time::{Duration, Instant};
 
 use ncurses::*;
 use rand::Rng;
@@ -29,25 +29,27 @@ fn main() {
         clear();
 
         // 바구니 그리기
-        mvprintw(height - 1, bucket_pos-1, "^^^");
+        mvprintw(height - 1, bucket_pos - 1, "^^^");
 
         // 빗물 그리기
         let now = Instant::now();
         if now.duration_since(last_drop_time) >= Duration::from_millis(250) {
             last_drop_time = now;
 
-            if drop_pos == height - 2 { score -= 1; } // 바닥에 닿은 경우    
-            else if drop_pos == height - 3 && (bucket_pos - drop_col).abs() <= 1 { score += 1; } // 바구니에 닿은 경우
-            else { drop_pos += 1; } // 중간에 있는 경우
-            
-            if drop_pos >= height - 1 {
-                // 빗물이 화면 밖으로 나간 경우
+            if drop_pos == height - 2 {
+                if (bucket_pos - drop_col).abs() <= 1 {
+                    score += 1;
+                } else {
+                    score -= 1;
+                }
                 drop_pos = 0;
                 drop_col = rng.gen_range(0..width);
+            } else {
+                drop_pos += 1;
             }
         }
         mvprintw(drop_pos, drop_col, "*");
-        
+
         // 스코어 표시
         mvprintw(0, 0, &format!("Score: {}", score));
 
