@@ -1,6 +1,6 @@
-# Rainy Day Game
+# Dodge rain Game
 
-Rainy Day Game은 ncurses와 Rust 언어를 이용하여 개발한 터미널 게임입니다. 
+Dodge rain Game은 ncurses와 Rust 언어를 이용하여 개발한 터미널 게임입니다. 
 
 ## 게임 방법
 
@@ -29,3 +29,10 @@ cargo build
 
 # 게임을 실행합니다.
 cargo run
+
+## 코드 시연
+![demo](https://user-images.githubusercontent.com/38421491/231823315-f9877426-4426-4aaa-94ec-1f05a96898ec.gif)
+
+
+
+
