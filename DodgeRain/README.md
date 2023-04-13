@@ -29,9 +29,12 @@ cargo build
 
 # 게임을 실행합니다.
 cargo run
+```
 
 ## 코드 시연
-![demo](https://user-images.githubusercontent.com/38421491/231823315-f9877426-4426-4aaa-94ec-1f05a96898ec.gif)
+
+![demo](https://user-images.githubusercontent.com/38421491/231823955-6e7bf01c-41bf-4acf-98f0-0cf0396443ba.gif)
+
 
 
 
